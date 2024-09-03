@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
-import ProductContext from './productContext'
+import CartContext from './CartContext'
 
 const Cart = () => {
 
-    const item = useContext(ProductContext);
+    const item = useContext(CartContext);
 
     return (
         <>

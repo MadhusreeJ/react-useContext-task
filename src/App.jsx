@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Cart from './Cart'
 import "bootstrap/dist/css/bootstrap.min.css"
-import { ProductProvider } from './productContext'
+import { CartProvider } from './CartContext'
 import logo from './logo.svg'
 
 function App() {
@@ -24,9 +24,9 @@ function App() {
         </div>
       </div>
       <hr style={{ marginTop: 0, borderWidth: 3, color: '#ff1a8c' }}></hr>
-      <ProductProvider>
+      <CartProvider>
         <Cart />
-      </ProductProvider>
+      </CartProvider>
     </>
   )
 }

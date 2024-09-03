@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import { useState } from "react";
 
-const ProductContext = createContext();
+const CartContext = createContext();
 
 const product = {
     "id": 1,
@@ -16,15 +16,15 @@ const product = {
     }
 }
 
-export const ProductProvider = ({ children }) => {
+export const CartProvider = ({ children }) => {
     const [quantity, setQuantity] = useState(0)
 
     return (
-        <ProductContext.Provider value={{ product, quantity, setQuantity }}>
+        <CartContext.Provider value={{ product, quantity, setQuantity }}>
             {children}
-        </ProductContext.Provider>
+        </CartContext.Provider>
     )
 }
 
 
-export default ProductContext;
+export default CartContext;
